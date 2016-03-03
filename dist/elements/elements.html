@@ -16720,16 +16720,16 @@ module.exports = Array.isArray || function (arr) {
       app.route = 'home';
     });
 
-    page('/users', function() {
+    page(app.baseUrl+'users', function() {
       app.route = 'users';
     });
 
-    page('/users/:name', function(data) {
+    page(app.baseUrl+'users/:name', function(data) {
       app.route = 'user-info';
       app.params = data.params;
     });
 
-    page('/contact', function() {
+    page(app.baseUrl+'contact', function() {
       app.route = 'contact';
     });
 
